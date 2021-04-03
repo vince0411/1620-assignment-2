@@ -28,7 +28,7 @@ grid-column: 1 / -1;
 box-sizing: border-box;
 display: flex;
 flex-direction: row;
-justify-content: flex-start;
+justify-content: flex-end;
 }
 
 header a:hover {
@@ -61,6 +61,19 @@ box-sizing: border-box;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
+}
+
+textarea {
+margin: 30px;
+max-width: 500px;
+background-color: #f6c177;
+border-radius: 10px;
+border: 4px double #e0def4;
+color: #26233a;
+text-align: center;
+font-size: 28px;
+padding: 10px;
+width: 100px;
 }
 
 .slide {
