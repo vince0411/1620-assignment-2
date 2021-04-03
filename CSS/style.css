@@ -6,6 +6,13 @@ background-color: #c4a7e7;
 font-family: 'Fresca', sans-serif;
 }
 
+li {
+list-style-type: none;
+margin-right: 5rem;
+margin-bottom: 3rem;
+background-color: #907aa9;
+}
+
 .container {
 font-size: 22px;
 color: #2a273f;
@@ -14,21 +21,21 @@ grid-template-columns: repeat(12, 1fr);
 grid-template-rows: 10vh 90vh 5vh
 }
 
-.header {
+header {
 background-color: #c4a7e7;
 padding: 10px;
 grid-column: 1 / -1;
 box-sizing: border-box;
 display: flex;
 flex-direction: row;
-justify-content: space-evenly;
+justify-content: flex-start;
 }
 
-.header a:hover {
+header a:hover {
 color: #f2e9de;
 }
 
-.header a {
+header a {
 text-decoration: none;
 color: #2a273f;
 }
@@ -37,15 +44,7 @@ color: #2a273f;
 background-color: #907aa9;
 padding: 10px;
 height: 100%;
-grid-column: 3 / 1;
-}
-
-.sidebar ul li {
-background-color: #907aa9;
-padding: 10px;
-height: 100%;
-grid-column: 3 / 1;
-list-style: none;
+grid-column: 3 / 2;
 }
 
 .content {
@@ -56,7 +55,7 @@ grid-column: 3/ -1;
 
 .footer {
 background-color: #c4a7e7;
-padding: 10px;
+padding: 20px;
 grid-column: 1 / -1;
 box-sizing: border-box;
 display: flex;
@@ -69,7 +68,7 @@ display: inline-block;
 background-color: #f6c177;
 border-radius: 10px;
 border: 4px double #e0def4;
-color: #e0def4;
+color: #26233a;
 text-align: center;
 font-size: 28px;
 padding: 10px;
@@ -130,7 +129,7 @@ display: inline-block;
 background-color: #f6c177;
 border-radius: 10px;
 border: 4px double #e0def4;
-color: #2a273f;
+color: #26233a;
 text-align: center;
 font-size: 28px;
 padding: 10px;
@@ -165,7 +164,7 @@ margin: 5px;
     }
 
 .slide:hover span:after {
-    opacity: 5;
+    opacity: 1;
     right: 0;
     }
 }
