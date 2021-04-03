@@ -17,8 +17,14 @@ background-color: #907aa9;
 font-size: 22px;
 color: #2a273f;
 display: grid;
-grid-template-columns: repeat(12, 1fr);
-grid-template-rows: 10vh 90vh 5vh
+grid-template-columns: minmax(0px, auto)1fr;
+grid-template-rows: 5rem 1fr 5rem;
+grid-template-areas: 
+      's h'
+      's m'
+      's f';
+width: 100vw;
+height: 100vh;
 }
 
 header {
@@ -73,7 +79,7 @@ color: #26233a;
 text-align: center;
 font-size: 28px;
 padding: 10px;
-width: 100px;
+width: 120px;
 }
 
 .slide {
@@ -126,13 +132,13 @@ flex-direction: row;
 margin-bottom: 10px;
 }
 
-/* media query for desktop*/
-@media screen and (min-width: 1025px) {
+/* media query for mobile devices */
+@media screen and (max-width: 600px) {
 .container {
-font-size: 25px;
+font-size: 18px;
 color: #2a273f;
 display: grid;
-grid-template-columns: repeat(8, 2fr);
+grid-template-columns: repeat(11, 1fr);
 grid-template-rows: 10vh 90vh 5vh
     }
 
@@ -149,53 +155,40 @@ width: 100px;
 transition: all 0.5s;
 cursor: pointer;
 margin: 5px;
-    }
-
-.slide span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-    }
-
-.slide span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-    }
-
-.slide:hover {
-    background-color: #ebbcba;
-    }
-
-.slide:hover span {
-    padding-right: 25px;
-    }
-
-.slide:hover span:after {
-    opacity: 1;
-    right: 0;
-    }
 }
 
-/* media query for mobile devices */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-.container {
-font-size: 18px;
-color: #2a273f;
-display: grid;
-grid-template-columns: repeat(11, 1fr);
-grid-template-rows: 10vh 90vh 5vh
-    }
+.slide span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
 
-.slide {
-line-height: 2;
-padding: 0 10px;
-font-size: 1.1rem;
-color: #26233a;
-background-color: #eb6f92;
-    }
+.slide span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.slide:hover {
+background-color: #ebbcba;
+}
+
+.slide:hover span {
+padding-right: 25px;
+}
+
+.slide:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+label {
+display: flex;
+flex-direction: row;
+margin-bottom: 10px;
+   }
 }
