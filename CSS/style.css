@@ -28,13 +28,8 @@ height: 100vh;
 }
 
 header {
+grid-area: h;
 background-color: #c4a7e7;
-padding: 10px;
-grid-column: 1 / -1;
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
 }
 
 header a:hover {
@@ -47,20 +42,19 @@ color: #2a273f;
 }
 
 .sidebar {
+grid-area: s;
 background-color: #907aa9;
-padding: 10px;
-height: 100%;
-grid-column: 2 / 1;
+padding: 5px;
 }
 
 .content {
+grid-area: m;
 background-color: #c4a7e7;
-padding: 80px;
-grid-column: 3/ -1;
+font-size: 2rem
 }
 
 footer {
-background-color: #c4a7e7;
+background-color: #907aa9;
 padding: 10px;
 grid-column: 1 / -1;
 box-sizing: border-box;
