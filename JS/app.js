@@ -1,3 +1,57 @@
+const DARK_MODE = 'dark';
+const LIGHT_MODE = 'light';
+const THEME = 'mode';
+
+
+// functions to change light mode into dark mode and vise versa //
+// Clicking moon logo changes theme to dark; clicking sun logo changes theme back to light//
+document.addEventListener(
+  'DOMContentLoaded', (event) => {
+    applyTheme();
+    const toggleSwitch = document.getElementById('toggle-switch');
+    toggleSwitch.onclick = function() {
+      let currentMode = localStorage.getItem(THEME);
+      localStorage.setItem(
+        THEME, 
+        currentMode === DARK_MODE ? LIGHT_MODE : DARK_MODE
+      );
+      applyTheme();
+    }
+  }
+);
+
+function applyTheme() {
+  let html = document.documentElement;
+  let currentMode = localStorage.getItem(THEME);
+  if (currentMode === DARK_MODE) {
+    html.classList.add(DARK_MODE);
+    document.getElementById('toggle-switch').innerHTML = 
+      '<i class="fas fa-sun"></i>';
+  } 
+  else {
+    html.classList.remove(DARK_MODE);
+    document.getElementById('toggle-switch').innerHTML = 
+      '<i class="fas fa-moon"></i>';
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // * function to delete notes * //
 // • function deleteNote(index)  {     
 // •	 let confirmDel = confirm(“You are deleting this note!!”);
