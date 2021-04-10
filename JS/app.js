@@ -1,7 +1,7 @@
 const DARK_MODE = 'dark';
 const LIGHT_MODE = 'light';
 const THEME = 'mode';
-
+const notesarray = [];
 
 // functions to change light mode into dark mode and vise versa //
 // Clicking moon logo changes theme to dark; clicking sun logo changes theme back to light//
@@ -34,6 +34,18 @@ function applyTheme() {
       '<i class="fas fa-moon"></i>';
   }
 }
+
+function createContentWritingArea()  {
+const div = document.querySelector('#content')
+div.insertAdjacentHTML('beforeend')
+setCursor()
+}
+
+function setCursor()  {
+const div = document.querySelector('#note-area')
+div.focus()
+}
+
 
 
 
