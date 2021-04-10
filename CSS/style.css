@@ -1,7 +1,6 @@
   
 * {
 margin: 0;
-padding: 0px;
 font-family: 'Fresca', sans-serif;
 font-size: 10px;
 }
@@ -19,6 +18,25 @@ body {
   color: var(--ft-color);
   padding: 10%;
   margin-left: 90px;
+}
+
+[conintenteditable]  {
+font-size: 25px;
+color: #31748f;
+}
+
+[conintenteditable] > div{
+font-size: 25px;
+color: #1f1d2e;
+}
+
+[conintenteditable] > div:first-child{
+font-size: 25px;
+color: #1f1d2e;
+}
+
+[conintenteditable]:focus{
+outline: none;
 }
 
 li {
