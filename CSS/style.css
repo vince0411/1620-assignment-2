@@ -20,6 +20,11 @@ body {
   margin-left: 90px;
 }
 
+.fas  {
+color: #2a273f;
+font-size: 40px;
+}
+
 [conintenteditable]  {
 font-size: 25px;
 color: #31748f;

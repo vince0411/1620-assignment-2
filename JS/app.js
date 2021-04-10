@@ -35,9 +35,20 @@ function applyTheme() {
   }
 }
 
+function defineNoteWritingSection()  {
+html = `
+<div class = "textarea">
+<div class = "textinput" contenteditable="true"></div>
+<button onclick = "saveNote()">save</button>
+<button onclick = "cleanUp()">cancel</button>
+</div>
+`
+return html 
+}
+
 function createContentWritingArea()  {
 const div = document.querySelector('#content')
-div.insertAdjacentHTML('beforeend')
+div.insertAdjacentHTML('beforeend', defineNoteWritingSection())
 setCursor()
 }
 
@@ -45,6 +56,21 @@ function setCursor()  {
 const div = document.querySelector('#note-area')
 div.focus()
 }
+
+function saveNote()  {
+const div = document.querySelector('#note')
+const title = div.firstChild.textContent
+notesArray.push(createNote(title, "body"))
+console.log(notesArray)
+}
+
+function createNote(title, body)  {
+return { title,body }
+}
+
+
+
+
 
 
 
