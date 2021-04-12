@@ -1,4 +1,5 @@
-  
+
+
 * {
 margin: 0;
 font-family: 'Fresca', sans-serif;
@@ -15,7 +16,6 @@ html.dark {
 
 body {
   background: var(--bck-color);
-  color: var(--ft-color);
   padding: 10%;
   margin-left: 90px;
 }
@@ -25,22 +25,22 @@ color: #2a273f;
 font-size: 40px;
 }
 
-[conintenteditable]  {
+.conintenteditable  {
 font-size: 25px;
 color: #31748f;
 }
 
-[conintenteditable] > div{
+.conintenteditable > div{
 font-size: 25px;
 color: #1f1d2e;
 }
 
-[conintenteditable] > div:first-child{
+.conintenteditable > div:first-child{
 font-size: 25px;
 color: #1f1d2e;
 }
 
-[conintenteditable]:focus{
+.conintenteditable:focus{
 outline: none;
 }
 
@@ -48,7 +48,6 @@ li {
 font-size: 2.5rem;
 list-style-type: none;
 background-color: #907aa9;
-color: #2a273f;
 margin-right: 3rem;
 margin-bottom: 2rem;
 }
@@ -62,7 +61,6 @@ background-color: #907aa9;
 
 .container {
 font-size: 22px;
-color: #2a273f;
 display: grid;
 grid-template-columns: minmax(0px, auto)1fr;
 grid-template-rows: 5rem 1fr 5rem;
@@ -99,12 +97,12 @@ font-size: 2rem;
 margin-right: 70px;
 }
 
-textarea {
+#textarea {
 margin: 10px;
 max-width: 500px;
 }
 
-.textinput {
+#text {
 height: 300px;
 width: 675px;
 background-color: #9ccfd8;
@@ -115,7 +113,6 @@ font-size: 2rem;
 
 button {
 background-color: #f6c177;
-color: #2a273f;
 border-radius: 10px;
 border: 4px double #e0def4;
 font-size: 2rem;
@@ -209,11 +206,11 @@ font-size: 2rem;
  margin-left: 5px;
   }
 
- .textarea {
+ #textarea {
  max-width: 100vw;
   }
 
- .textinput {
+ #text {
  height: 300px;
  width: 500px;
  background-color: #9ccfd8;
@@ -259,11 +256,11 @@ font-size: 2rem;
  margin-left: 5px;
   }
 
- .textarea  {
+ #textarea  {
  max-width: 100vw;
   }
 
- .textinput   {
+ #text{
  height: 150px;
  width: 275px;
  background-color: #9ccfd8;
@@ -278,4 +275,3 @@ font-size: 2rem;
   }
 
 }
-
